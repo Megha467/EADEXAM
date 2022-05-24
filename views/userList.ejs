@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> User List </h1>
+    <h1> <%=users[0].fullname%> </h1>
+    <table>
+        <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>City</th>
+    <th>PostCode</th>
+    <th>Delete</th>
+    <th>Edit</th>
+        </tr>
+    <%for(var i=0; i<users.length; i++)%>
+        <tr>
+        <td> <img src="/images/<%=users[i].image%>" /></td>    
+        <td> users[i].fullname</td>
+        <td> users[i].email</td>
+        <td> users[i].phone</td>
+        <td> users[i].city</td>
+        <td> users[i].postcode</td>
+        <td href="/user/delete/<%=users[i]._id%>"> delete</td>
+        <td href="/user/update/<%=users[i]._id%>"> delete</td>
+        </tr>
+    </table>
+</body>
+</html>
